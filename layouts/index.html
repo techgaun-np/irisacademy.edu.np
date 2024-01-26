@@ -15,7 +15,7 @@
                     </p>
                 </div>
                 <div class="col-span-6">
-                    {{ $hero := resources.GetMatch "images/pages/tailbliss-rocket-indigo.png" }}
+                    {{ $hero := resources.GetMatch "images/pages/iris-main.jpg" }}
 
                     {{ $thumb := ($hero.Fill "400x400 webp q90") }}
                     {{ $large := ($hero.Fill "576x576 webp q90") }}
@@ -155,6 +155,7 @@
         </div>
     </div>
 
+    {{ if not .Site.Params.Disable_blog_section}}
     <!-- Blog section -->
     <div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12">
         <div class="absolute inset-0">
@@ -232,6 +233,8 @@
             </div>
         </div>
     </div>
+
+    {{ end }}
 
     {{ if not .Site.Params.Disable_stay_uptodate}}
     <!-- CTA section -->
