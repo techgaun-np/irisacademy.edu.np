@@ -39,20 +39,20 @@ export default function Navbar() {
   return (
     <header className="w-full shadow-md">
       {/* Top strip */}
-      <div className="bg-[#1c1b35] text-white text-sm">
+      <div className="bg-[#2D2C4C] text-white text-xs md:text-sm">
         <div className="container mx-auto flex justify-between items-center py-4 px-4">
           {/* Contact info */}
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1">
+          <div className="flex  items-center gap-4">
+            <div className="flex text-[10px] md:text-sm font-normal items-center !text-white gap-1">
               <Phone size={14} /> +977 9841234567 | 078-580453
-            </span>
-            <span className="flex items-center gap-1">
+            </div>
+            <div className="flex text-[10px] md:text-sm font-normal items-center !text-white gap-1">
               <Mail size={14} /> info@irisacademy.edu.np
-            </span>
+            </div>
           </div>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-3">
+          <div className="md:flex hidden items-center gap-3">
             <Link href="#" target="_blank">
               <FacebookIcon size={20} className="hover:text-yellow-500" />
             </Link>

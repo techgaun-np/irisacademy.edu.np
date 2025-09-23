@@ -9,7 +9,7 @@ const teamMembers = [
   {
     name: "Gina Caselangelo",
     role: "Science HOD",
-    image: "/team/team.jpg", // replace with actual image path
+    image: "/team/team.jpg",
   },
   {
     name: "Gina Caselangelo",
@@ -33,12 +33,15 @@ export default function TeamSection() {
     <section className="py-16">
       <div className="container mx-auto px-6">
         {/* Heading */}
-        <div className="mb-10 text-center md:text-left md:w-2/3">
-          <p className="text-sm font-semibold text-yellow-600">Meet Our Team</p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight">
-            Good Education Starts From Great Teachers
-          </h2>
-          <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+        <div className="mb-10 flex md:flex-row flex-col text-center md:text-left">
+          <div className="md:w-1/2">
+            <p className="text-sm font-semibold text-primary">Meet Our Team</p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight">
+              Good Education Starts From Great Teachers
+            </h2>
+          </div>
+
+          <p className="mt-4 md:w-1/2 text-gray-600 text-sm leading-relaxed">
             At Hrs Academy, we combine academic excellence with
             character-building values. Our goal is to create a nurturing
             environment where students grow into confident learners,

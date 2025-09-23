@@ -1,35 +1,12 @@
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import GallaryCommonImageContainer from "../common/GallaryCommonImageContainer";
 
-const GallaryImage = () => {
+const Gallary = () => {
   return (
     <div className=" py-10 ">
       <div className="container">
-        <Tabs
-          defaultValue="recent"
-          className="w-[200px] md:w-[400px] md:mx-auto"
-        >
-          <TabsList className="md:gap-4 mb-8">
-            <TabsTrigger className="text-sm md:text-base" value="recent">
-              Recent
-            </TabsTrigger>
-            <TabsTrigger className="text-sm md:text-base" value="2024">
-              2024
-            </TabsTrigger>
-            <TabsTrigger className="text-sm md:text-base" value="2023">
-              2023
-            </TabsTrigger>
-            <TabsTrigger className="text-sm md:text-base" value="2022">
-              2022
-            </TabsTrigger>
-            <TabsTrigger
-              className="text-sm md:text-base md:flex hidden"
-              value="2021"
-            >
-              2021
-            </TabsTrigger>
-          </TabsList>
-        </Tabs>
+        <h1 className="text-2xl font-bold text-center mb-8">
+          In a <span className="text-primary">Glimpse</span>
+        </h1>
         <div className="md:flex md:flex-col mt-4 gap-2">
           {/* Map through your images here */}
           <div className="md:flex gap-2">
@@ -92,4 +69,4 @@ const GallaryImage = () => {
   );
 };
 
-export default GallaryImage;
+export default Gallary;

@@ -47,7 +47,7 @@ export default function ContactForm() {
       <div className="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
         {/* Left: Form */}
         <div>
-          <p className="text-sm font-semibold text-yellow-600">Get In Touch</p>
+          <p className="text-sm font-semibold text-primary">Get In Touch</p>
           <h2 className="mt-2 text-xl font-semibold text-gray-900">
             Have questions? We’re here to help.
           </h2>

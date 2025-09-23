@@ -1,4 +1,4 @@
-import GallaryImage from "@/components/gallary/GallaryImage";
+import Gallary from "@/components/gallary/Gallary";
 import AboutSection from "@/components/homepage/AboutSection";
 import AcademySection from "@/components/homepage/AcademySection";
 import Hero from "@/components/homepage/Hero";
@@ -12,7 +12,7 @@ export default function Home() {
       <AboutSection />
       <AcademySection />
       <PrincipalMessageComponent />
-      <GallaryImage />
+      <Gallary />
       <JoinCommunityComponent />
     </div>
   );

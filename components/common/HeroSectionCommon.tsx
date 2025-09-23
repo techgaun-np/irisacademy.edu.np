@@ -20,7 +20,7 @@ const HeroSectionCommon: React.FC<HeroSectionProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`relative w-full h-[500px] md:h-[600px] ${className}`}>
+    <div className={`relative w-full h-[400px] md:h-[500px] ${className}`}>
       {/* Background Image */}
       <Image
         src={imageSrc}
@@ -36,22 +36,22 @@ const HeroSectionCommon: React.FC<HeroSectionProps> = ({
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4">
         {/* Title */}
-        <h2 className="text-white text-4xl md:text-5xl font-extrabold mb-3">
+        <h2 className="text-white text-4xl md:text-5xl font-extrabold mb-6">
           {title}
         </h2>
 
         {/* Subtitle */}
-        <p className="text-gray-200 text-lg md:text-2xl font-medium mb-2">
+        <p className="text-white text-lg md:text-xl font-medium mb-2">
           {subtitle}
         </p>
 
         {/* Description */}
-        <p className="text-white/90 max-w-3xl text-sm md:text-lg mb-6">
+        <p className="text-white max-w-3xl text-sm md:text-lg mb-6">
           {description}
         </p>
 
         {/* CTA Button */}
-        <Button className="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full hover:bg-yellow-600">
+        <Button className="bg-yellow-500 text-black font-semibold px-6 py-3 h-10 rounded-full hover:bg-yellow-600">
           Discover More
         </Button>
       </div>
