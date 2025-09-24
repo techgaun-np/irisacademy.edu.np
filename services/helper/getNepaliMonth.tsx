@@ -28,3 +28,11 @@ export const getNepaliDate = () => {
     nepaliMonthIndex: -1, // Invalid index if no data found
   };
 };
+
+export const toNepaliNumber = (num: number) => {
+  const nepaliDigits = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
+  return String(num)
+    .split("")
+    .map((digit) => nepaliDigits[parseInt(digit)])
+    .join("");
+};

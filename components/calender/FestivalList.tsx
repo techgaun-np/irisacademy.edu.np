@@ -11,115 +11,44 @@ const FestivalList = () => {
     </Suspense>
   );
 };
-
 const FestivalListContent = () => {
-  const searchParams = useSearchParams();
-  const nameParam = searchParams.get("name")?.toLowerCase();
-  const monthParam = searchParams.get("month")?.toLowerCase();
-
   const today = new Date();
   today.setUTCHours(0, 0, 0, 0);
 
-  const filteredFestivals = FestivalData.filter((festival) => {
+  const upcomingFestivals = FestivalData.filter((festival) => {
     const festivalDate = new Date(festival.date);
     festivalDate.setUTCHours(0, 0, 0, 0);
-    const isUpcoming = festivalDate >= today;
-
-    const matchesName =
-      !nameParam || festival.title.toLowerCase().includes(nameParam);
-
-    const matchesMonth = !monthParam || festival.month.includes(monthParam);
-
-    return isUpcoming && matchesName && matchesMonth;
+    return festivalDate >= today;
   });
 
+  const nonHolidayFestivals = upcomingFestivals.filter((f) => !f.isHoliday);
+  const holidayFestivals = upcomingFestivals.filter((f) => f.isHoliday);
+
   return (
-    <div className="py-2 w-full mt-2">
-      {/* <CustomPageHeader title={`आगामी चाडपर्वहरू`} /> */}
-      <div className="grid gap-4">
-        {filteredFestivals.length > 0 ? (
-          filteredFestivals.map((festival, index) => (
-            <FestivalItem key={index} festival={festival} />
-          ))
-        ) : (
-          <div className="flex justify-center items-center">
-            <p>{`खोजका मापदण्ड अनुरूप कुनै चाडपर्व फेला परेन।`}</p>
+    <div className="grid grid-cols-2 w-full gap-4 mt-2">
+      {/* Left Column: Non-Holidays */}
+      <div className="flex flex-col gap-3">
+        {nonHolidayFestivals.map((festival, idx) => (
+          <div key={idx} className="flex w-full gap-6 items-center">
+            <span className="!text-primary !font-semibold !text-xl">
+              {festival.date.split("-")[2]}
+            </span>
+            <span className="!text-[#333333] !text-lg ">{festival.name}</span>
           </div>
-        )}
+        ))}
       </div>
-    </div>
-  );
-};
 
-interface Festival {
-  name: string;
-  description: string;
-  date: string;
-}
-
-const FestivalItem = ({ festival }: { festival: Festival }) => {
-  const [isInView, setIsInView] = useState(false);
-  const itemRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsInView(true);
-          } else {
-            setIsInView(false); // Reset the animation when it leaves the viewport
-          }
-        });
-      },
-      {
-        threshold: 0.2, // Trigger when 20% of the item is in view
-      }
-    );
-
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
-    }
-
-    return () => {
-      if (itemRef.current) {
-        observer.unobserve(itemRef.current);
-      }
-    };
-  }, []);
-
-  return (
-    <div
-      ref={itemRef}
-      className={`text-gray-400  grid grid-cols-2 py-2 justify-between items-center gap-6 transform transition-opacity duration-1000 ease-in-out`}
-    >
-      <div className="flex  gap-6">
-        <h3 className="text-primary">
-          {festival.date}{" "}
-          {/* <span>  
-          {new Date(festival.date).toLocaleString("ne-NP", {
-            weekday: "long",
-          })}
-        </span> */}
-        </h3>
-        <div>
-          <h1 className="text-[#333333]">{festival.name}</h1>
-          {/* <p className="text-muted-foreground">{festival.description}</p> */}
-        </div>
-      </div>
-      <div className="flex  gap-6">
-        <h3 className="text-red-500">
-          {festival.date}{" "}
-          {/* <span>  
-          {new Date(festival.date).toLocaleString("ne-NP", {
-            weekday: "long",
-          })}
-        </span> */}
-        </h3>
-        <div>
-          <h1 className="text-[#333333]">{festival.name}</h1>
-          {/* <p className="text-muted-foreground">{festival.description}</p> */}
-        </div>
+      {/* Right Column: Holidays */}
+      <div className="flex flex-col gap-3 w-full">
+        {holidayFestivals.slice(0, 10).map((festival, idx) => (
+          <div key={idx} className="flex gap-6 items-center justify-start">
+            <span className="!text-red-500 !font-semibold !text-xl">
+              {" "}
+              {festival.date.split("-")[2]}
+            </span>
+            <span className="!text-[#333333] !text-lg ">{festival.name}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
