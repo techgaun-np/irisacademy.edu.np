@@ -2,19 +2,19 @@
 
 "use client";
 
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const teamMembers = [
   {
-    name: "Gina Caselangelo",
-    role: "Science HOD",
-    image: "/team/team.jpg",
+    name: "Sher Bahadur Acharya",
+    role: "Principal",
+    image: "/home/principle1.png",
   },
   {
-    name: "Gina Caselangelo",
-    role: "Science HOD",
-    image: "/team/team.jpg",
+    name: "Sindhu Jalesa Budhathoki",
+    role: "Chairperson",
+    image: "/team/chairperson.png",
   },
   {
     name: "Gina Caselangelo",

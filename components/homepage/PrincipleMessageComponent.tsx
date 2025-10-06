@@ -7,7 +7,7 @@ const PrincipalMessageComponent = () => {
       <div className="container overflow-hidden flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 p-4">
           <Image
-            src="/home/principle.png" // Replace with your image path
+            src="/home/principle1.png" // Replace with your image path
             alt="Principal Jane Doe"
             width={300}
             height={400}
