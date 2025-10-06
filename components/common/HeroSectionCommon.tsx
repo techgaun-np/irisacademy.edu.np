@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 interface HeroSectionProps {
   imageSrc: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: string;
   className?: string;
 }

@@ -11,7 +11,7 @@ const getFestival = (date: string) => {
 const Days = () => {
   const nepaliToday = new NepaliDate();
   const { currentMonthIndex, nepaliYear } = useMonthStore(
-    (state: any) => state
+    (state: { currentMonthIndex: number; nepaliYear: number }) => state
   );
 
   const displayedMonthDate = new NepaliDate(nepaliYear, currentMonthIndex, 1);

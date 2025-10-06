@@ -8,9 +8,10 @@ import { NepaliDate } from "nepali-date-library";
 
 const Days = () => {
   const nepaliToday = new NepaliDate(); // gives today's Nepali date
-  const TotalDaysInMonth = nepaliToday.daysInMonth();
   const today = new Date().toISOString().split("T")[0];
-  const { currentMonthIndex } = useMonthStore((state: any) => state);
+  const { currentMonthIndex } = useMonthStore(
+    (state: { currentMonthIndex: number }) => state
+  );
 
   const activeMonthData = dateData[currentMonthIndex];
 
