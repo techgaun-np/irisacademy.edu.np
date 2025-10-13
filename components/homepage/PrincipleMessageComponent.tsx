@@ -29,7 +29,7 @@ const PrincipalMessageComponent = () => {
           </blockquote>
           <p className="mt-4 text-left text-gray-700 text-lg md:text-xl font-bold">
             An academy where learning sparks leadership
-            <br />- Jane Doe
+            <br />- Sher Bahadur Acharya
           </p>
         </div>
       </div>
