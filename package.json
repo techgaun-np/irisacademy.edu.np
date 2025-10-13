@@ -1,46 +1,52 @@
 {
-  "name": "TailBliss",
-  "version": "0.1.1",
-  "description": "Hugo + Alpine.js + TailwindCSS",
-  "main": "index.js",
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.13",
-    "@tailwindcss/typography": "^0.5.18",
-    "alpinejs": "^3.15.0",
-    "autoprefixer": "^10.4.21",
-    "concurrently": "^9.2.1",
-    "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1",
-    "tailwindcss": "^4.1.12"
-  },
+  "name": "irisacademy.github.io",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "concurrently npm:watch:*",
-    "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --watch",
-    "watch:hugo": "hugo server",
-    "build": "hugo --minify",
-    "test": "hugo"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nusserstudios/tailbliss.git"
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-navigation-menu": "^1.2.14",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-select": "^2.2.6",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.542.0",
+    "nepali-calendar-react": "^1.0.3",
+    "nepali-date-library": "^1.1.9",
+    "next": "15.5.2",
+    "next-themes": "^0.4.6",
+    "nodemailer": "^7.0.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.62.0",
+    "resend": "^6.0.2",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.3.1",
+    "vaul": "^1.1.2",
+    "zod": "^4.1.5",
+    "zustand": "^5.0.8"
   },
-  "keywords": [
-    "hugo",
-    "tailwind",
-    "tailwindcss",
-    "alpinejs",
-    "minimal",
-    "responsive",
-    "light mode",
-    "dark mode",
-    "hugo blog",
-    "categories",
-    "tags"
-  ],
-  "author": "NusserStudios",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/nusserstudios/tailbliss/issues"
-  },
-  "homepage": "https://github.com/nusserstudios/tailbliss"
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/nodemailer": "^7.0.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "tailwindcss": "^4",
+    "tw-animate-css": "^1.3.8",
+    "typescript": "^5"
+  }
 }
