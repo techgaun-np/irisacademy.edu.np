@@ -5,10 +5,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { dateData } from "@/data/datesData";
 import { useMonthStore } from "@/services/zustand/useMonthStore";
 import { ChevronsLeft, ChevronsRight } from "lucide-react";
-import "nepali-calendar-react/dist/index.css";
 import { MONTH_EN, NepaliDate } from "nepali-date-library";
 import { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
@@ -25,10 +23,6 @@ const CalenderComponent = () => {
     setYear,
   } = useMonthStore((state) => state);
 
-  const currentMonthData = dateData[currentMonthIndex];
-  const nepaliMonth = currentMonthData
-    ? currentMonthData.month
-    : "Invalid Month";
   const prevMonthIndexRef = useRef<number | null>(null);
   const today = new NepaliDate();
   const currentNepaliYear = today.getYear();
