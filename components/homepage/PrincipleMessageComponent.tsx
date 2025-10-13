@@ -1,4 +1,3 @@
-// components/PrincipalMessageComponent.js
 import Image from "next/image";
 
 const PrincipalMessageComponent = () => {
@@ -7,11 +6,11 @@ const PrincipalMessageComponent = () => {
       <div className="container overflow-hidden flex flex-col md:flex-row items-center">
         <div className="md:w-1/2 p-4">
           <Image
-            src="/home/principle1.png" // Replace with your image path
+            src="/home/principle1.png"
             alt="Principal Jane Doe"
             width={300}
             height={400}
-            className="rounded-full md:w-[500px] translate-x-[-70px] md:translate-x-[-150px]"
+            className="rounded-full md:w-[500px] translate-x-[-70px] md:translate-x-[-100px]"
           />
         </div>
         <div className="md:w-1/2 md:translate-x-[-100px] p-4">
