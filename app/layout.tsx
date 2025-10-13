@@ -4,7 +4,6 @@ import "./globals.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import { Toaster } from "@/components/ui/sonner";
-import "nepali-calendar-react/dist/index.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
