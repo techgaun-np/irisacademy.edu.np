@@ -1,6 +1,6 @@
 "use client";
 
-import { FacebookIcon, InstagramIcon, Mail, MapPin, Phone } from "lucide-react";
+import { FacebookIcon, InstagramIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -31,7 +31,7 @@ const Footer = () => {
                   info@irisacademy.edu.np
                 </a>
               </p>
-              <p className="text-xs">078-580453</p>
+              <p className="text-xs">9857025527</p>
               <p className="text-xs">
                 Bardaghat-2, Nawalparasi Susta Paschim, Nepal
               </p>
@@ -85,9 +85,30 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="text-xs text-white p-2 mt-2 bg-[#2D2C4C] text-center">
+      {/* Copyright + Powered By */}
+      <div className="text-xs text-white p-2 mt-2 bg-[#2D2C4C] text-center flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">
         <p className="text-white">Copyright 2025. All Rights Reserved</p>
+        <span>|</span>
+        <div className="flex items-center justify-center gap-1">
+          <span className="text-white"> Powered by</span>
+          <a
+            href="https://techgaun.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center hover:opacity-80"
+          >
+            <Image
+              src="/techgaun-logo-small.png"
+              alt="Techgaun Nepal Logo"
+              width={16}
+              height={16}
+              className="ml-1"
+            />
+            <span className="ml-1 text-white font-semibold">
+              Techgaun Nepal
+            </span>
+          </a>
+        </div>
       </div>
     </footer>
   );

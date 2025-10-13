@@ -1,5 +1,3 @@
-// components/contact-form.tsx
-
 "use client";
 
 import * as z from "zod";
@@ -39,7 +37,6 @@ export default function ContactForm() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log("Form submitted:", values);
-    // You can replace with API call (e.g., send to backend)
   }
 
   return (

@@ -10,7 +10,7 @@ const PrincipalMessageComponent = () => {
             alt="Principal Jane Doe"
             width={300}
             height={400}
-            className="rounded-full md:w-[500px] translate-x-[-70px] md:translate-x-[-100px]"
+            className="rounded-full md:w-[500px]  md:translate-x-[-100px]"
           />
         </div>
         <div className="md:w-1/2 md:translate-x-[-100px] p-4">
