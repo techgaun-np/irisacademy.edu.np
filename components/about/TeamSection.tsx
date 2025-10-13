@@ -17,14 +17,14 @@ const teamMembers = [
     image: "/team/chairperson.png",
   },
   {
-    name: "Gina Caselangelo",
-    role: "Science HOD",
-    image: "/team/team.jpg",
+    name: "",
+    role: "",
+    image: "/gallary/gallary7.png",
   },
   {
-    name: "Gina Caselangelo",
-    role: "Science HOD",
-    image: "/team/team.jpg",
+    name: "",
+    role: "",
+    image: "/gallary/gallary3.png",
   },
 ];
 
