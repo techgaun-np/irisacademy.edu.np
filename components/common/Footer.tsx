@@ -89,7 +89,7 @@ const Footer = () => {
       {/* Copyright + Powered By */}
       <div className="text-xs text-white p-2 mt-2 bg-[#2D2C4C] text-center flex flex-col md:flex-row justify-center items-center gap-1 md:gap-3">
         <p className="text-white">Copyright 2025. All Rights Reserved</p>
-        <span>|</span>
+        <span className="md:flex hidden">|</span>
         <div className="flex items-center justify-center gap-1">
           <span className="text-white"> Powered by</span>
           <a

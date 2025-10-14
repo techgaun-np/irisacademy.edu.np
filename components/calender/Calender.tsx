@@ -43,11 +43,11 @@ const CalenderComponent = () => {
             {nepali} | {today.toString()}
           </p>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center mt-4 md:mt-0 space-x-4">
           <Button variant="ghost" onClick={decrementMonth}>
             <ChevronsLeft />
           </Button>
-          <div className="flex w-44 gap-4 items-center justify-center">
+          <div className="flex w-32  md:w-44 gap-4 items-center justify-center">
             <Select
               value={MONTH_EN[currentMonthIndex]} // controlled value
               onValueChange={(value) => {
@@ -55,7 +55,7 @@ const CalenderComponent = () => {
                 if (newIndex !== -1) setMonthIndex(newIndex);
               }}
             >
-              <SelectTrigger className="w-[130px]">
+              <SelectTrigger className="w-[100px] md:w-[130px]">
                 <SelectValue placeholder="Month" />
               </SelectTrigger>
               <SelectContent>
@@ -73,7 +73,7 @@ const CalenderComponent = () => {
               value={nepaliYear.toString()} // controlled value
               onValueChange={(value) => setYear(parseInt(value, 10))}
             >
-              <SelectTrigger className="w-[130px]">
+              <SelectTrigger className=" w-[100px] md:w-[130px]">
                 <SelectValue placeholder="Year" />
               </SelectTrigger>
               <SelectContent>
