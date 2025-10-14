@@ -13,7 +13,7 @@ const contactItems = [
       <Phone className="w-8 h-8 rounded-full text-white p-2 bg-[#2D2C4C]" />
     ),
     title: "Let’s Talk",
-    details: ["+977 9857025527 "],
+    details: [" 078-580453, +977 9857025527 "],
   },
   {
     icon: <Mail className="w-8 h-8 rounded-full text-white p-2 bg-[#2D2C4C]" />,

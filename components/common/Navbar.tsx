@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Contact info */}
           <div className="flex  items-center gap-4">
             <div className="flex text-[10px] md:text-sm font-normal items-center !text-white gap-1">
-              <Phone size={14} /> +977 9857025527
+              <Phone size={14} /> 078-580453, +977 9857025527
             </div>
             <div className="flex text-[10px] md:text-sm font-normal items-center !text-white gap-1">
               <Mail size={14} /> info@irisacademy.edu.np
