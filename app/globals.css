@@ -157,6 +157,14 @@
   }
 }
 
+@custom-media --xs (min-width: 400px);
+@custom-media --xs1 (min-width: 500px);
+@custom-media --xs2 (min-width: 600px);
+
+@custom-variant xs (&:media(--xs));
+@custom-variant xs1 (&:media(--xs1));
+@custom-variant xs2 (&:media(--xs2));
+
 .animate-marquee {
   display: inline-block;
   animation: marquee 15s linear infinite;

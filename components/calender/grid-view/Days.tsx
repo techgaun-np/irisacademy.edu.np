@@ -27,10 +27,15 @@ const Days = () => {
     nepaliToday.getMonth() === currentMonthIndex;
 
   return (
-    <div className="grid grid-cols-7 gap-4 h-full my-8">
+    <div className="grid grid-cols-7 md:gap-4 gap-2 h-full my-8">
       {daysArray.map((day, index) => {
         if (day === null) {
-          return <div key={index} className="w-36 h-36" />;
+          return (
+            <div
+              key={index}
+              className="lg:w-36 md:w-20 md:h-20 w-10 h-10 lg:h-36"
+            />
+          );
         }
 
         const isToday =
@@ -54,7 +59,7 @@ const Days = () => {
           <div
             key={index}
             className={cn(
-              `text-[#707070] relative text-base w-36 h-36 border border-red-100 rounded-sm ${isToday} ${isFestival} ${isSaturday}`
+              `text-[#707070] relative flex items-center justify-center text-sm md:text-base lg:w-36 lg:h-36 md:w-24 md:h-24 sm:w-16 h-11 sm:h-16   border border-red-100 rounded-sm ${isToday} ${isFestival} ${isSaturday}`
             )}
           >
             <span className={`nepali-date ${isSaturday} cursor-pointer`}>
@@ -62,7 +67,7 @@ const Days = () => {
             </span>
 
             {festival && (
-              <div className="absolute bottom-1 left-2 text-xs text-white bg-red-500 p-1 rounded-sm">
+              <div className="absolute md:flex hidden bottom-1 left-2 text-xs text-white bg-red-500 p-1 rounded-sm">
                 {festival.name}
               </div>
             )}

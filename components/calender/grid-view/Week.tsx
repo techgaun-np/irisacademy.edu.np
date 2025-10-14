@@ -10,7 +10,7 @@ const Week = () => {
         <div
           key={index}
           className={cn(
-            "text-center text-xs uppercase text-[#707070] md:text-base",
+            "text-center  text-xs uppercase text-[#707070] md:text-base",
             index === WeekNum &&
               "text-[#707070] underline underline-offset-[18px] decoration-primary"
           )}
