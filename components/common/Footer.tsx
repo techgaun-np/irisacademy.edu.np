@@ -31,7 +31,8 @@ const Footer = () => {
                   info@irisacademy.edu.np
                 </a>
               </p>
-              <p className="text-xs">9857025527</p>
+
+              <p className="text-xs">078-580453,9857025527</p>
               <p className="text-xs">
                 Bardaghat-2, Nawalparasi Susta Paschim, Nepal
               </p>
