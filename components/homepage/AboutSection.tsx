@@ -31,7 +31,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-lg">
-                  Over ( {new Date().getFullYear() - 2004}) Years of Academic
+                  Over {new Date().getFullYear() - 2004} Years of Academic
                   Excellence
                 </h4>
                 <p className="text-gray-600 text-sm">
