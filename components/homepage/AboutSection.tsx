@@ -31,7 +31,8 @@ export default function AboutSection() {
               </div>
               <div>
                 <h4 className="font-semibold text-lg">
-                  Over 27 Years of Academic Excellence
+                  Over ( {new Date().getFullYear() - 2004}) Years of Academic
+                  Excellence
                 </h4>
                 <p className="text-gray-600 text-sm">
                   Proven experience in delivering quality education across
