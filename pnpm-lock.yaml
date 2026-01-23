@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@hookform/resolvers':
-        specifier: ^5.2.1
+        specifier: ^5.2.2
         version: 5.2.2(react-hook-form@7.66.0(react@19.1.0))
       '@radix-ui/react-dialog':
         specifier: ^1.1.15
